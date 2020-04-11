@@ -112,8 +112,8 @@ var config = {
 //	}
 //  },
     
-    	{
-			//need google API directions, geolocation, and maps javascript
+	{
+	  //need google API directions, geolocation, and maps javascript
 	  module: 'MMM-MyCommute',
 	  position: 'top_center',
 	  config: {
@@ -125,77 +125,69 @@ var config = {
 		showSummary: true,
 		pollFrequency: 900000,
 		destinations: [
-		  {
-			destination: 'WORK HERE',
-			label: 'Work',
-			mode: 'driving',
-			color: '#82E5AA'
-		  },
-		  {
-			destination: 'SOMETHING ELSE HERE.',
-			label: 'SASOL',
-			mode: 'driving',
-			color: '#82d9e5'
-		  }
-		  //{
-		  //  destination: '55 Mill St, Toronto, ON M5A 3C4',
-		  //  label: 'Distillery District',
-		  //  mode: 'bicycling'
-		  //},
-		  //{
-		  //  destination: '6301 Silver Dart Dr, Mississauga, ON L5P 1B2',
-		  //  label: 'Pearson Airport',
-		  //  avoid: 'tolls'
-		  //}
-		]
+						  {
+							destination: 'WORK HERE',
+							label: 'Work',
+							mode: 'driving',
+							color: '#82E5AA'
+						  },
+						  {
+							destination: 'SOMETHING ELSE HERE.',
+							label: 'SASOL',
+							mode: 'driving',
+							color: '#82d9e5'
+						  }
+					]
 	  }
 	},
 	{
-          module: "MMM-AVStock",
-          position: "top_center", //"bottom_bar" is better for `mode:ticker`
-                  config: {
-                    apiKey : "xxxxxxxxxx", // https://www.alphavantage.co/
-                    timeFormat: "YYYY-MM-DD HH:mm:ss",
-                    symbols : ["SOL.JO", "FNB.JO", "CPI.JO", "ABG.JO", "SBK.JO", "NBKP.JO", "OMU.JO", "AGL.JO","JSE.JO", "TCP.JO"],
-                    alias: ["Sasol","FNB","Capitec","ABSA","Std Bank","Nedbank","Old Mutual","Anglo American","JSE","Transcap"], //Easy name of each symbol. When you use `alias`, the number of symbols and alias s$
-                    tickerDuration: 60, // Ticker will be cycled once per this second.
-                    chartDays: 90, //For `mode:series`, how much daily data will be taken. (max. 90)
-                    poolInterval : 1000*15, // (Changed in ver 1.1.0) - Only For Premium Account
-                    mode : "table", // "table", "ticker", "series"
-                    decimals: 2, // number o decimals for all values including decimals (prices, price changes, change%...)
-                    candleSticks : true, //show candle sticks if mode is Series
-                    coloredCandles : false, //colored bars: red and green for negative and positive candles
-                    premiumAccount: false, // To change poolInterval, set this to true - Only For Premium Account
-                }
-        },
-        {
+	  module: "MMM-AVStock",
+	  position: "top_center", //"bottom_bar" is better for `mode:ticker`
+	  config: {
+		apiKey : "xxxxxxxxxx", // https://www.alphavantage.co/
+		timeFormat: "YYYY-MM-DD HH:mm:ss",
+		symbols : ["SOL.JO", "FNB.JO", "CPI.JO", "ABG.JO", "SBK.JO", "NBKP.JO", "OMU.JO", "AGL.JO","JSE.JO", "TCP.JO"],
+		alias: ["Sasol","FNB","Capitec","ABSA","Std Bank","Nedbank","Old Mutual","Anglo American","JSE","Transcap"], //Easy name of each symbol. When you use `alias`, the number of symbols and alias s$
+		tickerDuration: 60, // Ticker will be cycled once per this second.
+		chartDays: 90, //For `mode:series`, how much daily data will be taken. (max. 90)
+		poolInterval : 1000*15, // (Changed in ver 1.1.0) - Only For Premium Account
+		mode : "table", // "table", "ticker", "series"
+		decimals: 2, // number o decimals for all values including decimals (prices, price changes, change%...)
+		candleSticks : true, //show candle sticks if mode is Series
+		coloredCandles : false, //colored bars: red and green for negative and positive candles
+		premiumAccount: false, // To change poolInterval, set this to true - Only For Premium Account
+		}
+	},
+	{
   	  module: 'MMM-CurrencyExchange',
 	  position: 'top_right',
-		config: {
+	  config: {
 		    base: 'USD',
 		    symbols: ['ZAR'],
 		    layoutStyle: 'table',
 		    showCustomHeader: true,
   		}
-	},{
-          module: 'MMM-CurrencyExchange',
-          position: 'top_right',
-                config: {
-                    base: 'EUR',
-                    symbols: ['ZAR'],
-                    layoutStyle: 'table',
-		    showCustomHeader: true,
-                }
-        },{
-          module: 'MMM-CurrencyExchange',
-          position: 'top_right',
-                config: {
-                    base: 'GBP',
-                    symbols: ['ZAR'],
-                    layoutStyle: 'table',
-		    showCustomHeader: true,
-                }
-        },
+	},
+	{
+	  module: 'MMM-CurrencyExchange',
+	  position: 'top_right',
+	  config: {
+			base: 'EUR',
+			symbols: ['ZAR'],
+			layoutStyle: 'table',
+			showCustomHeader: true,
+		}
+	},
+	{
+	  module: 'MMM-CurrencyExchange',
+	  position: 'top_right',
+	  config: {
+			base: 'GBP',
+			symbols: ['ZAR'],
+			layoutStyle: 'table',
+			showCustomHeader: true,
+		}
+	},
    ]
 };
 
