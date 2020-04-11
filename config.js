@@ -93,7 +93,7 @@ var config = {
 //	module: 'MMM-GoogleMapsTraffic',
 //	position: 'top_center',
 //	config: {
-//		key: 'AIzaSyDZ5OUmSH1-O6i9s-nUkLicN-ypZdHPMEw',
+//		key: 'Axxxxx',
 //		lat: -26.2885659,
 //		lng: 28.0890136,
 //		height: '200px',
